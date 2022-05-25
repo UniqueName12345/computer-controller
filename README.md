@@ -27,12 +27,14 @@ pip uninstall computer_controller
 ```
 And then type in `y` to uninstall.
 
+To fully uninstall, you need to remove the folder called `computer_controller.egg-info`. This is `rm -rf computer_controller.egg-info` in bsh, or `del computer_controller.egg-info` in cmd.
+
 Then, if you want to install it again, refer back to [the installation section.](#How-to-Install)
 
 ## How to use
 
-For linux migrators/users, you can use commands from windows.
-For example, to install a package, you can do `winget install package-name`
+For linux users (i.e Ubuntu, Debian, Arch, etc.), you can use the commands from Windows.
+Example: `dir` in Windows is `ls` in Linux.
 
 For Windows migrators/users (i.e. Windows 10, Windows 8.1, etc.), you can use commands from linux.
 For example, to print something to a file, you can use `cat "message" > /path/to/file`
@@ -71,9 +73,7 @@ It currently only uses the following dependencies:
 Me and GitHub Copilot, currently.
 
 ## Contributing
-
 To contribute, please fork the repository and submit a pull request.
 
 ## One more thing....
-
 Goodbye.
