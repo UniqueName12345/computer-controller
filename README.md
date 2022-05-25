@@ -44,20 +44,15 @@ For Windows users, follow the instructions [here](https://www.windowscentral.com
 
 For Linux users, first, you need to login as root (i.e. `sudo su -`).
 
-Then, you need to install the `doas` package using the command:
-```
-sudo apt-get install doas
-```
+Then, you need to install the `doas` package using the command `sudo apt-get install doas`
+
 
 Then, you need to add main.py to the `/etc/sudoers` file using the command:
 ```
 echo "doas ALL=(ALL) NOPASSWD: /usr/bin/python3 /home/user/path/to/main.py" >> /etc/sudoers
 ```
 
-Then, you need to log back into your account using the command:
-```
-exit
-```
+Then, you need to log back into your account using the `exit` command.
 
 Then, you can run the script using the command:
 ```
@@ -70,3 +65,14 @@ It currently only uses the following dependencies:
 * [git](https://git-scm.com/downloads) (at least until releases get added)
 * [os](https://docs.python.org/3/library/os.html)
 * Nothing else! :D
+
+## Credits
+Me and Github Copilot, currently.
+
+## Contributing
+
+To contribute, please fork the repository and submit a pull request.
+
+## One more thing....
+
+Goodbye.
