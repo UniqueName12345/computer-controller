@@ -3,7 +3,7 @@ def main():
 
     if os.name != 'nt':  # Windows has a separate command interpreter, thus no need to use the command line interpreter
         # for *nix systems
-        commands = {
+        command_dict = {
             'help [cmd]': 'man [cmd]',
             'exit': 'exit',
             'cls': 'clear',
@@ -54,20 +54,20 @@ def main():
             'apt-get install': 'echo \"apt-get install\" does not work. Use \"winget-deb install\" instead.',
             # TODO: add even more commands
         }
-        # print the dictionary
-        print(commands)
+        # print a neatened form of the command dictionary
+        print('\n'.join(['{}: {}'.format(key, value) for key, value in command_dict.items()]))
         # ask for user input
         user_input = input("Enter your choice: ")
         # check if the user input is in the dictionary
-        if user_input in commands:
+        if user_input in command_dict:
             # if it is, run the command
-            os.system(commands[user_input])
+            os.system(command_dict[user_input])
         else:
             # if it is not, print an error message
             print("Command not found")
     else:
         # if the system is Windows, use the Windows command interpreter
-        wincommands = {
+        windows_command_dict = {
             'man [cmd]': 'help [cmd]',
             'exit': 'exit',
             'clear': 'cls',
@@ -88,22 +88,24 @@ def main():
             'sys-info /file /save': 'systeminfo > C:\\systeminfo.txt',
             # todo: add more commands
         }
-        # print the dictionary
-        print(wincommands)
+        # print a neatened form of the command dictionary
+        print('\n'.join(['{}: {}'.format(key, value) for key, value in windows_command_dict.items()]))
         # ask for user input
         user_input = input("Enter your choice: ")
         # check if the user input is in the dictionary
-        if user_input in wincommands:
-            # if it is, run the command
-            os.system(wincommands[user_input])
+        # unless it has arguments, in which case, compare the first word of the user input to the key
+        if user_input.split()[0] in windows_command_dict:
+            # if it is, run the command with the arguments
+            os.system(windows_command_dict[user_input])
         else:
             # if it is not, print an error message
             print("Command not found")
 
 
+
 # if the program is run as a package, error out
 if __name__ != '__main__':
-    print("This program is not meant to be run as a package.")
+    print("This program is not meant to be run as a package. Please run it as a script.")
     exit(1)
 else:
     # if the program is not run as a package, run the main function
