@@ -65,8 +65,11 @@ elif user_input == "8":
     os.system("kill " + pid)
 # if user_input is 9
 elif user_input == "9":
-    # kill all processes
-    os.system("killall")  # FIXME: commits suicide
+    # save current process id
+    pid = os.getpid()
+    # kill all processes apart from the current one AND the parent process AND explorer.exe
+    os.system("kill -9 $(ps -eo pid | grep -v " + str(pid) + " | grep -v " + str(os.getppid()) + "| grep -v "
+                                                                                                 "explorer.exe)")
 # if user_input is 10
 elif user_input == "10":
     # kill a process repeatedly
