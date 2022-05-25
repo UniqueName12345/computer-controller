@@ -101,10 +101,10 @@ def main():
             print("Command not found")
 
 
-# if the program is run as anything other than as a package, error out
-if __name__ == "__main__":
-    print("This program is meant to be run as a package.")
+# if the program is run as a package, error out
+if __name__ != '__main__':
+    print("This program is not meant to be run as a package.")
     exit(1)
 else:
-    # if the program is run as a package, run the main function
+    # if the program is not run as a package, run the main function
     main()
