@@ -6,20 +6,28 @@
 (note: some actions require admin / sudo privileges, when asked, simply give it needed admin perms)
 
 ## How to Install
-Since there are no releases, you need to install the latest version from source. TODO: add releases
+There is a setup script that will install all the dependencies and the controller script.
 
-First, install git [here](https://git-scm.com/downloads) if you don't have it already.
-
-Then, clone the repository using the `git` command:
+Run the setup script:
 ```
-git clone https://github.com/UniqueName12345/computer-controller
+python setup.py install
 ```
-
-Then, go into the /src folder and run the command `python3 C:\Users\username\path\to\computer-controller\src\main.py` on Windows or `/usr/bin/python3 /path/to/computer-controller/src/main.py` on Linux.
+And then type in `y` to install.
 
 And now, you can control your computer as you wish!*
 
 ###### *With limitations which we will get to later.
+
+## How to uninstall
+Accidentally installed it? Changed your mind? Do not fear!
+
+Simply run:
+```
+pip uninstall computer_controller
+```
+And then type in `y` to uninstall.
+
+Then if you want to install it again, refer back to [the installation section.](#installation)
 
 ## How to use
 
