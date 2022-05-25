@@ -30,7 +30,7 @@ Then, you need to install the `doas` package using the command `apt-get install 
 
 Then, you need to add main.py to the `/etc/sudoers` file using the command:
 ```
-echo "doas ALL=(ALL) NOPASSWD: /usr/bin/python3 /home/user/path/to/main.py" >> /etc/sudoers
+doas echo "doas ALL=(ALL) NOPASSWD: /usr/bin/python3 /home/user/path/to/main.py" >> /etc/sudoers
 ```
 
 Then, you need to log back into your account using the `exit` command.
