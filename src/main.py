@@ -1,20 +1,30 @@
 import os
 
-print("""
-System controller!
-1. Show all processes
-2. Show all processes by user
-3. Show all processes by name
-4. Show all processes by name and user
-5. Show all processes by name and user and status
-6. Show all processes by name and status
-7. Show all processes by user and status
-8. Kill a process
-9. Kill all processes
-10. Kill a process repeatedly
-11. Kill all processes repeatedly
-12. Kill a process by name
-13. Shutdown the system""")  # TODO: should I use a dictionary?
+commands = {
+    'help': 'help',
+    'exit': 'exit',
+    'clear': 'clear',
+    'ls': 'ls',
+    'cd': 'cd',
+    'pwd': 'pwd',
+    'cat': 'cat',
+    'mkdir': 'mkdir',
+    'rm': 'rm',
+    'mv': 'mv',
+    'cp': 'cp',
+    'install-deb': 'apt-get install',
+    # NOTE: This is not a command, but an apt-get command. It is not a part of the shell. Thus, it only works with
+    # Debian-based systems.
+    'install-rpm': 'yum install',
+    # NOTE: This is not a command, but a yum command. It is not a part of the shell. Thus, it only works with
+    # Redhat-based systems.
+    'install-pacman': 'pacman -S',
+    # NOTE: This is not a command, but a pacman command. It is not a part of the shell. Thus, it only works with
+    # Arch-based systems.
+    'install-brew': 'brew install',
+    # NOTE: This is not a command, but a brew command. It is not a part of the shell. Thus, it only works with
+    # MacOS-based systems.
+}
 # ask for user input
 user_input = input("Enter your choice: ")
 # if user_input is 1
