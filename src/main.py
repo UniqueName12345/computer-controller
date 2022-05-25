@@ -1,8 +1,30 @@
+import os
+
+
+def another_command():
+    cmd = input("> ")
+    if cmd == "quit":
+        print("Bye!")
+    else:
+        # if it is windows
+        if os.name == "nt":
+            # see if it has arguments or not
+            if cmd.find(" ") != -1:
+                # if it has arguments, split the command and arguments
+                cmd, args = cmd.split(" ", 1)
+                # check against the windows commands
+                if cmd in windows_command_dict:
+                    # execute the command
+                    windows_command_dict[cmd](args)
+
+
 def main():
     import os
 
     if os.name != 'nt':  # Windows has a separate command interpreter, thus no need to use the command line interpreter
         # for *nix systems
+        global command_dict  # FIXME: could potentially cause problems, because it says that command_dict is
+        # undefined at the module level
         command_dict = {
             'help [cmd]': 'man [cmd]',
             'exit': 'exit',
@@ -63,11 +85,14 @@ def main():
         if user_input in command_dict:
             # if it is, run the command
             os.system(command_dict[user_input])
+            another_command()
         else:
             # if it is not, print an error message
             print("Command not found")
     else:
         # if the system is Windows, use the Windows command interpreter
+        global windows_command_dict  # FIXME: could potentially cause problems, because it says that command_dict is
+        # undefined at the module level
         windows_command_dict = {
             'man [cmd]': 'help [cmd]',
             'exit': 'exit',
@@ -99,6 +124,10 @@ def main():
         if user_input.split()[0] in windows_command_dict:
             # if it is, run the command with the arguments
             os.system(windows_command_dict[user_input])
+            # after each command, print a new line
+            print()
+            # then, ask the user for another command
+            another_command()
         else:
             # if it is not, print an error message
             print("Command not found")
