@@ -37,7 +37,7 @@ For Windows users, follow the instructions [here](https://www.windowscentral.com
 
 For Linux users, first, you need to login as root (i.e. `sudo su -`).
 
-Then, you need to install the `doas` package using the command `sudo apt-get install doas`
+Then, you need to install the `doas` package using the command `apt-get install doas`
 
 
 Then, you need to add main.py to the `/etc/sudoers` file using the command:
