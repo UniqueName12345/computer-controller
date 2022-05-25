@@ -15,14 +15,14 @@ if os.name != 'nt':  # Windows has a separate command interpreter, thus no need 
         'mv': 'mv',
         'cp': 'cp',
         'install-deb': 'apt-get install',
-        # NOTE: This is not a command, but an apt-get command. It is not a part of the shell. Thus, it only works with
-        # Debian-based systems.
+        # NOTE: This is not a builtin command, but an apt-get command. It is not a part of the shell. Thus,
+        # it only works with Debian-based systems.
         'install-rpm': 'yum install',
-        # NOTE: This is not a command, but a yum command. It is not a part of the shell. Thus, it only works with
-        # Redhat-based systems.
+        # NOTE: This is not a builtin command, but a yum command. It is not a part of the shell. Thus, it only works
+        # with Redhat-based systems.
         'install-pacman': 'pacman -S',
-        # NOTE: This is not a command, but a pacman command. It is not a part of the shell. Thus, it only works with
-        # Arch-based systems.
+        # NOTE: This is not a builtin command, but a pacman command. It is not a part of the shell. Thus,
+        # it only works with Arch-based systems.
         'install-brew': 'brew install',
         # NOTE: This is not a command, but a brew command. It is not a part of the shell. Thus, it only works with
         # MacOS-based systems.
