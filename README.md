@@ -63,7 +63,7 @@ sudo doas /usr/bin/python3 /home/user/path/to/main.py
 ## Dependencies
 It currently only uses the following dependencies:
 * [python3](https://www.python.org/downloads/)
-* [git](https://git-scm.com/downloads) (at least until releases get added)
+* ~~[git](https://git-scm.com/downloads) (at least until releases get added)~~ no need for git anymore. You can still install from source, however.
 * [os](https://docs.python.org/3/library/os.html)
 * Nothing else! :D
 
