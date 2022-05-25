@@ -13,23 +13,32 @@ if os.name != 'nt':  # Windows has a separate command interpreter, thus no need 
         'del': 'rm',
         'move': 'mv',
         'copy': 'cp',
-        'winget-deb install': 'apt-get install', # HACK: winget-deb is a wrapper for apt-get
-        'winget-deb remove': 'apt-get remove', # HACK: see above
-        'winget-deb run': 'apt-get run', # HACK: see above
-        'winget-deb update': 'apt-get update', # HACK: see above
-        'winget-rpm install': 'yum install', # HACK: see above
-        'winget-rpm remove': 'yum remove', # HACK: see above
-        'winget-rpm run': 'yum run', # HACK: see above
-        'winget-rpm update': 'yum update', # HACK: see above
-        'winget install': 'echo \"winget install\" does not work. Depending on your system, you may need to use \"winget-deb install\" or \"winget-rpm install\" instead.',
-        'winget remove': 'echo \"winget remove\" does not work. Depending on your system, you may need to use \"winget-deb remove\" or \"winget-rpm remove\" instead.',
-        'winget run': 'echo \"winget run\" does not work. Depending on your system, you may need to use \"winget-deb run\" or \"winget-rpm run\" instead.',
-        'winget update': 'echo \"winget update\" does not work. Depending on your system, you may need to use \"winget-deb update\" or \"winget-rpm update\" instead.',
-        'winget-deb': 'echo \"winget-deb\" does not work. Use \"winget-deb install\", \"winget-deb remove\", \"winget-deb run\", or \"winget-deb update\" instead.',
-        'winget-rpm': 'echo \"winget-rpm\" does not work. Use \"winget-rpm install\", \"winget-rpm remove\", \"winget-rpm run\", or \"winget-rpm update\" instead.',
-        'winget': 'echo \"winget\" does not work. Use \"winget install\", \"winget remove\", \"winget run\", or \"winget update\" instead.',
-        'apt-get': 'echo \"apt-get\" does not work. Use \"winget-deb install\", \"winget-deb remove\", \"winget-deb run\", or \"winget-deb update\" instead.',
-        'yum': 'echo \"yum\" does not work. Use \"winget-rpm install\", \"winget-rpm remove\", \"winget-rpm run\", or \"winget-rpm update\" instead.',
+        'winget-deb install': 'apt-get install',  # HACK: winget-deb is a wrapper for apt-get
+        'winget-deb remove': 'apt-get remove',  # HACK: see above
+        'winget-deb run': 'apt-get run',  # HACK: see above
+        'winget-deb update': 'apt-get update',  # HACK: see above
+        'winget-rpm install': 'yum install',  # HACK: see above
+        'winget-rpm remove': 'yum remove',  # HACK: see above
+        'winget-rpm run': 'yum run',  # HACK: see above
+        'winget-rpm update': 'yum update',  # HACK: see above
+        'winget install': 'echo \"winget install\" does not work. Depending on your system, you may need to use '
+                          '\"winget-deb install\" or \"winget-rpm install\" instead.',
+        'winget remove': 'echo \"winget remove\" does not work. Depending on your system, you may need to use '
+                         '\"winget-deb remove\" or \"winget-rpm remove\" instead.',
+        'winget run': 'echo \"winget run\" does not work. Depending on your system, you may need to use \"winget-deb '
+                      'run\" or \"winget-rpm run\" instead.',
+        'winget update': 'echo \"winget update\" does not work. Depending on your system, you may need to use '
+                         '\"winget-deb update\" or \"winget-rpm update\" instead.',
+        'winget-deb': 'echo \"winget-deb\" does not work. Use \"winget-deb install\", \"winget-deb remove\", '
+                      '\"winget-deb run\", or \"winget-deb update\" instead.',
+        'winget-rpm': 'echo \"winget-rpm\" does not work. Use \"winget-rpm install\", \"winget-rpm remove\", '
+                      '\"winget-rpm run\", or \"winget-rpm update\" instead.',
+        'winget': 'echo \"winget\" does not work. Use \"winget install\", \"winget remove\", \"winget run\", '
+                  'or \"winget update\" instead.',
+        'apt-get': 'echo \"apt-get\" does not work. Use \"winget-deb install\", \"winget-deb remove\", \"winget-deb '
+                   'run\", or \"winget-deb update\" instead.',
+        'yum': "echo \"yum\" does not work. Use \"winget-rpm install\", \"winget-rpm remove\", \"winget-rpm run\", "
+               "or \"winget-rpm update\" instead.",
         'apt-get install': 'echo \"apt-get install\" does not work. Use \"winget-deb install\" instead.',
         # TODO: add even more commands
     }
