@@ -4,7 +4,7 @@ def main():
     if os.name != 'nt':  # Windows has a separate command interpreter, thus no need to use the command line interpreter
         # for *nix systems
         commands = {
-            '?': 'help',
+            'help [cmd]': 'man [cmd]',
             'exit': 'exit',
             'cls': 'clear',
             'dir': 'ls',
@@ -68,7 +68,7 @@ def main():
     else:
         # if the system is Windows, use the Windows command interpreter
         wincommands = {
-            '?': 'help',
+            'man [cmd]': 'help [cmd]',
             'exit': 'exit',
             'clear': 'cls',
             'ls': 'dir',

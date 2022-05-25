@@ -44,7 +44,7 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.python setup.py install">
+  <component name="RunManager" selected="Python.main.py direct">
     <configuration name="main.py direct" type="PythonConfigurationType" factoryName="Python">
       <module name="computer-controller" />
       <option name="INTERPRETER_OPTIONS" value="" />
