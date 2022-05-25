@@ -16,6 +16,16 @@ def another_command():
                 if cmd in windows_command_dict:
                     # execute the command
                     windows_command_dict[cmd](args)
+                    another_command()
+                else:
+                    print("Command not found!")
+                    another_command()
+            else:
+                # if it doesn't have arguments, check against the windows commands
+                if cmd in windows_command_dict:
+                    # execute the command
+                    windows_command_dict[cmd]()
+                    another_command()
 
 
 def main():
