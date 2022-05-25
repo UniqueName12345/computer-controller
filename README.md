@@ -15,7 +15,13 @@ Then, clone the repository using the command:
 git clone https://github.com/UniqueName12345/computer-controller
 ```
 
-Then, go into the .src folder and run the following command:
+Then, go into the /src folder and run the following command:
 ```
 python3 main.py
 ```
+
+And now, you can control your computer as you wish!
+
+## How to use
+
+For linux users:
