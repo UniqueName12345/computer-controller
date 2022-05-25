@@ -27,7 +27,7 @@ pip uninstall computer_controller
 ```
 And then type in `y` to uninstall.
 
-Then if you want to install it again, refer back to [the installation section.](#How-to-Install)
+Then, if you want to install it again, refer back to [the installation section.](#How-to-Install)
 
 ## How to use
 
