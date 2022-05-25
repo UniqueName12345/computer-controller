@@ -19,7 +19,7 @@ And now, you can control your computer as you wish!*
 ###### *With limitations which we will get to later.
 
 ## How to uninstall
-Accidentally installed it? Changed your mind? Do not fear!
+Accidentally installed it? Changed your mind? （；へ：） Do not fear!
 
 Simply run:
 ```
@@ -31,9 +31,20 @@ To fully uninstall, you need to remove the folder called `computer_controller.eg
 
 Then, if you want to install it again, refer back to [the installation section.](#How-to-Install)
 
+## How to run
+Since this is a PACKAGE, you can make a python file that imports this package and then run it.
+
+Open up your ide of choice, make a new python file, and type in:
+```
+import computer_controller
+computer_controller.main()
+```
+
+Then, you can run the script by typing in `python name.py` in the command line.
+
 ## How to use
 
-For linux users (i.e Ubuntu, Debian, Arch, etc.), you can use the commands from Windows.
+For linux users (i.e. Ubuntu, Debian, Arch, etc.), you can use the commands from Windows.
 Example: `dir` in Windows is `ls` in Linux.
 
 For Windows migrators/users (i.e. Windows 10, Windows 8.1, etc.), you can use commands from linux.
@@ -74,6 +85,3 @@ Me and GitHub Copilot, currently.
 
 ## Contributing
 To contribute, please fork the repository and submit a pull request.
-
-## One more thing....
-Goodbye.
