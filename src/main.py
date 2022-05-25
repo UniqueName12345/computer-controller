@@ -14,36 +14,38 @@ System controller!
 10. Kill a process repeatedly
 11. Kill all processes repeatedly
 12. Kill a process by name
-13. Shutdown the system""") # TODO: should I use a dictionary?
+13. Shutdown the system""")  # TODO: should I use a dictionary?
 # ask for user input
 user_input = input("Enter your choice: ")
 # if user_input is 1
 if user_input == "1":
     # show all processes
-    os.system("ps -A") # NOTE: I believe this is not the best way to do this. For example, I could import the subprocess module.
+    os.system(
+        "ps -A")  # NOTE: I believe this is not the best way to do this. For example, I could import the subprocess
+    # module.
 # if user_input is 2
 elif user_input == "2":
     # show all processes by user
     user = input("Enter the user: ")
-    os.system("ps -u " + user) # NOTE: same as above
+    os.system("ps -u " + user)  # NOTE: same as above
 # if user_input is 3
 elif user_input == "3":
     # show all processes by name
     name = input("Enter the name: ")
-    os.system("ps -f -C " + name) # NOTE: same as above
+    os.system("ps -f -C " + name)  # NOTE: same as above
 # if user_input is 4
 elif user_input == "4":
     # show all processes by name and user
     name = input("Enter the name: ")
     user = input("Enter the user: ")
-    os.system("ps -u " + user + " -f -C " + name) # NOTE: same as above
+    os.system("ps -u " + user + " -f -C " + name)  # NOTE: same as above
 # if user_input is 5
 elif user_input == "5":
     # show all processes by name and user and status
     name = input("Enter the name: ")
     user = input("Enter the user: ")
     status = input("Enter the status: ")
-    os.system("ps -u " + user + " -f -C " + name + " -s " + status) # NOTE: same as above
+    os.system("ps -u " + user + " -f -C " + name + " -s " + status)  # NOTE: same as above
 # if user_input is 6
 elif user_input == "6":
     # show all processes by name and status
@@ -64,12 +66,12 @@ elif user_input == "8":
 # if user_input is 9
 elif user_input == "9":
     # kill all processes
-    os.system("killall") # FIXME: commits suicide
+    os.system("killall")  # FIXME: commits suicide
 # if user_input is 10
 elif user_input == "10":
     # kill a process repeatedly
     pid = input("Enter the pid: ")
-    os.system("kill -9 " + pid) # TODO: add debug messages
+    os.system("kill -9 " + pid)  # TODO: add debug messages
 # if user_input is 11
 elif user_input == "11":
     # kill all processes repeatedly
@@ -87,4 +89,4 @@ elif user_input == "13":
 else:
     # show error
     print("Error!")
-    print("Please enter a valid choice!") # NOTE: Well, to be honest, I don't know how to do this.
+    print("Please enter a valid choice!")  # NOTE: Well, to be honest, I don't know how to do this.
