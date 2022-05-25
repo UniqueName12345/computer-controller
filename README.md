@@ -43,3 +43,4 @@ Currently only uses the following dependencies:
 * [python3](https://www.python.org/downloads/)
 * [git](https://git-scm.com/downloads) (at least until releases get added)
 * [os](https://docs.python.org/3/library/os.html)
+* Nothing else! :D
