@@ -14,7 +14,7 @@ System controller!
 10. Kill a process repeatedly
 11. Kill all processes repeatedly
 12. Kill a process by name
-13. Shutdown the system""")
+13. Shutdown the system""") # ? should I use a dictionary?
 # ask for user input
 user_input = input("Enter your choice: ")
 # if user_input is 1
