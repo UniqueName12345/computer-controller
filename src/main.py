@@ -55,7 +55,8 @@ def main():
             # TODO: add even more commands
         }
         # print a neatened form of the command dictionary
-        print('\n'.join(['{}: {}'.format(key, value) for key, value in command_dict.items()]))
+        print('\n'.join(
+            ['{}: {}'.format(key, value) for key, value in command_dict.items()]))  # TODO: hide the keys on the right
         # ask for user input
         user_input = input("Enter your choice: ")
         # check if the user input is in the dictionary
@@ -89,7 +90,8 @@ def main():
             # todo: add more commands
         }
         # print a neatened form of the command dictionary
-        print('\n'.join(['{}: {}'.format(key, value) for key, value in windows_command_dict.items()]))
+        print('\n'.join(['{}: {}'.format(key, value) for key, value in
+                         windows_command_dict.items()]))  # TODO: hide the keys on the right
         # ask for user input
         user_input = input("Enter your choice: ")
         # check if the user input is in the dictionary
@@ -100,7 +102,6 @@ def main():
         else:
             # if it is not, print an error message
             print("Command not found")
-
 
 
 # if the program is run as a package, error out
