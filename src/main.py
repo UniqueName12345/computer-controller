@@ -5,27 +5,24 @@ def another_command():
     cmd = input("> ")
     if cmd == "quit":
         print("Bye!")
-    else:
-        # if it is windows
-        if os.name == "nt":
-            # see if it has arguments or not
-            if cmd.find(" ") != -1:
-                # if it has arguments, split the command and arguments
-                cmd, args = cmd.split(" ", 1)
+    elif os.name == "nt":
+        if cmd.find(" ") == -1:
+            # if it doesn't have arguments, check against the windows commands
+            if cmd in windows_command_dict:
+                # execute the command
+                windows_command_dict[cmd]()
+                another_command()
+
+        else:
+            # if it has arguments, split the command and arguments
+            cmd, args = cmd.split(" ", 1)
                 # check against the windows commands
-                if cmd in windows_command_dict:
-                    # execute the command
-                    windows_command_dict[cmd](args)
-                    another_command()
-                else:
-                    print("Command not found!")
-                    another_command()
+            if cmd in windows_command_dict:
+                # execute the command
+                windows_command_dict[cmd](args)
             else:
-                # if it doesn't have arguments, check against the windows commands
-                if cmd in windows_command_dict:
-                    # execute the command
-                    windows_command_dict[cmd]()
-                    another_command()
+                print("Command not found!")
+            another_command()
 
 
 def main():
@@ -87,8 +84,7 @@ def main():
             # TODO: add even more commands
         }
         # print a neatened form of the command dictionary
-        print('\n'.join(
-            ['{}: {}'.format(key, value) for key, value in command_dict.items()]))  # TODO: hide the keys on the right
+        print('\n'.join([f'{key}: {value}' for key, value in command_dict.items()]))
         # ask for user input
         user_input = input("Enter your choice: ")
         # check if the user input is in the dictionary
@@ -125,8 +121,15 @@ def main():
             # todo: add more commands
         }
         # print a neatened form of the command dictionary
-        print('\n'.join(['{}: {}'.format(key, value) for key, value in
-                         windows_command_dict.items()]))  # TODO: hide the keys on the right
+        print(
+            '\n'.join(
+                [
+                    f'{key}: {value}'
+                    for key, value in windows_command_dict.items()
+                ]
+            )
+        )
+
         # ask for user input
         user_input = input("Enter your choice: ")
         # check if the user input is in the dictionary
